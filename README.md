@@ -1,9 +1,5 @@
-How will I complete this Project?
+Project 5 will display a list of cities in Madison County Illinois.
 
-Review our course JavaScript Design Patterns.
-Download the Knockout framework.
-Write code required to add a full-screen map to your page using the Google Maps API.
-Write code required to add map markers identifying a number of locations your are interested in within this neighborhood.
-Implement the search bar functionality.
-Implement a list view of the identified locations.
-Add additional functionality using third-party APIs when a map marker, search result, or list view entry is clicked (ex. Yelp reviews, Wikipedia, Flickr images, etc). If you need a refresher on making AJAX requests to third-party servers, check out our Intro to AJAX course.
+When the page is brought up, there will be a list view on the left and a map view on the right.   You can limit the number of cities displayed by entering data in the search box.
+
+If you want to know more information about a city you can click on the marker or the city in the list view.   A link to wikipedia information will be displayed in the pop up info window.
