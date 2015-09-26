@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neighborhood Map Project.   Cities of Madison County Illinois</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        var scriptLoaded = false;
+
+        function checkScriptLoaded() {
+          if (!scriptLoaded){
+            errorMap();
+          }
+        }
+    </script>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places" onload="scriptLoaded=true;"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="checkScriptLoaded()">
+
+  <div class="wrapper">
+    <form id="search-container" class="search-container">
+        <label for="Search">Search: </label><input class="searchbox" data-bind="value: filter, valueUpdate: 'afterkeydown'" />
+    </form>
+
+    <hr>
+
+     <div class="location-container">
+        <h3 id="location-header">Locations</h3>
+        <ul data-bind="foreach: filteredItems" class="location-list">
+        <li data-bind="text: name, click: $parent.setLocation" class="locationItem"> </li>
+        </ul>
+    </div>
+
+        <div id="map"></div>
+        <div class="map-container", id="googleMap"  style="width:500px;height:500px;"></div>
+  </div>
+
+  <script src="js/lib/knockout-3.3.0.js"></script>
+  <script src="js/lib/jQuery.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
