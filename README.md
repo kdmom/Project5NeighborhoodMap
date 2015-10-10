@@ -1,4 +1,4 @@
-Project 5 will display a list of cities in Madison County Illinois.
+Project 5 will display a list of cities in Madison County Illinois.   Bring up index.html in your favorite browser to initiate the website.
 
 When the page is brought up, there will be a list view on the left and a map view on the right.   You can limit the number of cities displayed by entering data in the search box.
 
