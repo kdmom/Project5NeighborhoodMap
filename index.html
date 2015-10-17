@@ -20,10 +20,14 @@
 			if (!scriptLoaded){
 				errorMap();
 			}
+			else {
+				initData();
+				ko.applyBindings(new ViewModel());
+			}
 		}
 	</script>
 
-	<script  src="http://maps.googleapis.com/maps/api/js?libraries=places" onload="scriptLoaded=true;"></script>
+	<script async src="http://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" onload="scriptLoaded=true;"></script>
 </head>
 <body onload="checkScriptLoaded()">
 
@@ -45,8 +49,7 @@
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
 				<div class="row">
-					<!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12", id="googleMap"style="width:100%;height:500px;"></div> -->
-					 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12", id="googleMap"style="width:100%;height:450px;"></div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12", id="googleMap"style="width:100%;height:450px;"></div>
 				</div>
 			</div>
 		</div>
